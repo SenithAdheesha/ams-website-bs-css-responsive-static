@@ -12,6 +12,16 @@
     margin-left: 30px;  /* space to the left of each link */
 }
 
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+  .navbar-nav .nav-item {
+    margin: 0 auto; /* centers each link */
+  }
+}
+
 
 /* Nav Links Hover */
 .nav-link:hover {
