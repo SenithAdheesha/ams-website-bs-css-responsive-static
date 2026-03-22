@@ -1,7 +1,17 @@
 /* Navbar Styling */
+
+body {
+    /* background: rgb(245, 235, 222); */
+    background-image: url(images/redback.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 .navbar {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;    
+    transition: all 0.3s ease;
 }
 
 .navbar-brand img {
@@ -9,17 +19,20 @@
 }
 
 .navbar-nav .nav-item {
-    margin-left: 30px;  /* space to the left of each link */
+    margin-left: 30px;
+    /* space to the left of each link */
 }
 
 @media (max-width: 991px) {
-  .navbar-nav {
-    text-align: center;
-    width: 100%;
-  }
-  .navbar-nav .nav-item {
-    margin: 0 auto; /* centers each link */
-  }
+    .navbar-nav {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0 auto;
+        /* centers each link */
+    }
 }
 
 
@@ -33,30 +46,39 @@
 /* Active Link */
 .nav-link.active {
     font-weight: 600;
-    color: #f44336 !important;
+    color: #ffffff !important;
+    background: #6b0801;
+    border-radius: 10%;
+    padding: 10px;
 }
 
 /* Carousel Images: Force all images to same size */
 .carousel-item {
-    height: 90vh;          /* Fixed height for all slides */
+    height: 90vh;
+    /* Fixed height for all slides */
 }
 
 .carousel-item img {
     width: 100%;
-    height: 100%;          /* Fill carousel-item height */
-    object-fit: cover;     /* Crop image to fit without stretching */
+    height: 100%;
+    /* Fill carousel-item height */
+    object-fit: cover;
+    /* Crop image to fit without stretching */
 }
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
+
     .carousel-item {
-        height: 50vh;      /* Smaller height for tablets */
+        height: 50vh;
+        /* Smaller height for tablets */
     }
 }
 
 @media (max-width: 480px) {
     .carousel-item {
-        height: 40vh;      /* Even smaller for phones */
+        height: 40vh;
+        /* Even smaller for phones */
     }
 }
 
@@ -68,8 +90,8 @@
 /* Optional: Customize arrows */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5); 
-    border-radius: 50%;                  
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
     width: 40px;
     height: 40px;
 }
@@ -90,6 +112,10 @@
     align-items: center;
     gap: 40px;
     flex-wrap: wrap;
+    background-image: url(images/welcomeback.jpg);
+    background-size: cover;
+    padding: 35px;
+    border-radius: 10px;
 }
 
 /* IMAGE */
@@ -111,17 +137,21 @@
 .pres-text h1 {
     font-size: 32px;
     margin-bottom: 20px;
+    color: #6b0801;
 }
 
 .pres-text p {
     text-align: justify;
     margin-bottom: 15px;
     line-height: 1.6;
+    color: black;
+    font-size: 20px;
 }
 
 .pres-text h3 {
     margin-top: 20px;
     font-weight: normal;
+    color: #6b0801;
 }
 
 /* RESPONSIVE */
@@ -138,6 +168,22 @@
     .pres-text {
         flex: 1;
     }
+
+}
+
+@media(max-width:850px) {
+    .pres-text p {
+        font-size: 13px;
+    }
+
+}
+
+@media(max-width:1000px) {
+    .pres-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
 }
 
 
@@ -147,14 +193,15 @@
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 50px;
 }
 
 .facilities h1 {
     font-size: 32px;
     margin-bottom: 40px;
+    text-transform: uppercase;
+    color: white;
 }
-
 
 .row {
     display: flex;
@@ -170,8 +217,9 @@
     margin-bottom: 5%;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding-bottom: 20px;
+    padding: 20px;
     transition: 0.3s;
+    background: white;
 }
 
 .facilities-col:hover {
@@ -192,35 +240,39 @@
 .facilities-col h3 {
     margin-top: 16px;
     margin-bottom: 15px;
+    color: black;
 }
 
 .facilities-col p {
     padding: 0 15px;
     font-size: 14px;
+    color: black;
+    ;
 }
 
 
 .hero-btn {
     display: inline-block;
     text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
+    color: white;
+    border: 1px solid #f44336;
+    padding: 12px;
     font-size: 13px;
-    background: transparent;
+    background: #f44336;
     position: relative;
     cursor: pointer;
 }
 
 .hero-btn:hover {
-    border: 1px solid #f44336;
-    background: #f44336;
+    border: #6b0801;
+    background: #6b0801;
     transition: 0.5s;
+    color: white;
 }
 
-.btn-2 {
-    background: #777;
-}
+/* .btn-2 {
+    background: #fffefe;
+} */
 
 
 @media (max-width: 700px) {
@@ -230,6 +282,7 @@
 
     .facilities-col {
         flex-basis: 100%;
+        margin-top: 20px;
     }
 
     .facilities-col img {
@@ -243,7 +296,7 @@
 .cta {
     margin: 100px auto;
     width: 80%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/banner.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/memberbanner.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -265,13 +318,17 @@
 
 /* Footer Styling */
 .footer {
-    background-color: #222; /* dark footer */
+    background-color: #6b0801;
+    /* dark footer */
     color: #fff;
     font-size: 0.95rem;
+    text-align: center;
 }
 
-.footer h3, .footer h4 {
-    color: #f44336; /* matching red accent */
+.footer h3,
+.footer h4 {
+    color: #ffffff;
+    /* matching red accent */
     margin-bottom: 15px;
 }
 
@@ -291,6 +348,7 @@
 
 .footer-links a:hover {
     color: #f44336;
+
 }
 
 .footer-social a {
@@ -313,9 +371,39 @@
     .footer {
         text-align: center;
     }
+
     .footer-social {
         margin-top: 15px;
     }
 }
 
 
+
+/* Scroll to Top Button */
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+
+    background-color: red; /* Bootstrap red */
+    color: white;
+    border: none;
+    outline: none;
+
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 18px;
+
+    cursor: pointer;
+    display: none;
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+    background-color: #b02a37;
+    transform: translateY(-3px);
+}
